@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/_Orange Dude Blues_ A.mp3-6967dda4753f98b220edd54ce54c44ac.mp3str"
+
+[deps]
+
+source_file="res://audio/orange-dude-blues/_Orange Dude Blues_ A.mp3"
+dest_files=[ "res://.import/_Orange Dude Blues_ A.mp3-6967dda4753f98b220edd54ce54c44ac.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

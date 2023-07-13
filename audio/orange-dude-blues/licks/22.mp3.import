@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/22.mp3-7ee888a6004c2a033f428b52baf0266e.mp3str"
+
+[deps]
+
+source_file="res://audio/orange-dude-blues/licks/22.mp3"
+dest_files=[ "res://.import/22.mp3-7ee888a6004c2a033f428b52baf0266e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
