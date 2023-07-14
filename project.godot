@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "ScrollContainer",
+"class": "ScrollContainerSwipe",
+"language": "GDScript",
+"path": "res://ScrollContainerSwipe.gd"
+}, {
 "base": "Resource",
 "class": "Tag",
 "language": "GDScript",
 "path": "res://tags/Tag.gd"
 } ]
 _global_script_class_icons={
+"ScrollContainerSwipe": "",
 "Tag": ""
 }
 
@@ -44,6 +50,10 @@ mp3={
 "loop": false,
 "loop_offset": 0
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 

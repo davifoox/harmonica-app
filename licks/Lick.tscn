@@ -13,6 +13,7 @@ margin_left = -484.0
 margin_top = -164.0
 margin_right = 484.0
 margin_bottom = 164.0
+rect_min_size = Vector2( 968, 328 )
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
 
