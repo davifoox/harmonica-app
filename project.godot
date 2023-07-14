@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Harmonica App"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://harmonica-app-icon.png"
 
 [display]
 

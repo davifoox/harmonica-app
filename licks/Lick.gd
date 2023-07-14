@@ -8,7 +8,7 @@ onready var tags_container = $TagsContainer
 func _ready() -> void:
 	button.connect("pressed", self, "_on_button_pressed")
 	get_tags_and_add_as_groups()
-	label.text = name #get name from file, same as tags
+	label.text = get_name_from_file()
 		
 func _on_button_pressed():
 	audio_stream_player.play()
@@ -25,3 +25,15 @@ func get_tags_and_add_as_groups():
 		
 		add_to_group(tag_name)
 		print(tag_name)
+
+func get_name_from_file():
+	var LICKS_PATH = "res://licks/licks/"
+	var FILE_EXTENSION = "tscn"
+	
+	var lick_name = filename
+	lick_name = lick_name.lstrip(LICKS_PATH)
+	lick_name = lick_name.rstrip(FILE_EXTENSION)
+	lick_name = lick_name.rstrip(".")
+	
+	return lick_name
+	
