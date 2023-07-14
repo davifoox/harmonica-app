@@ -1,24 +1,21 @@
 extends Control
 
-export(String) var lick_name
-
 onready var button = $Button
 onready var label = $Label
 onready var audio_stream_player = $AudioStreamPlayer
 onready var tags_container = $TagsContainer
 
-const TAGS_PATH = "res://tags/tags/"
-const FILE_EXTENSION = "tres"
-
 func _ready() -> void:
 	button.connect("pressed", self, "_on_button_pressed")
 	get_tags_and_add_as_groups()
-	label.text = lick_name
+	label.text = name #get name from file, same as tags
 		
 func _on_button_pressed():
 	audio_stream_player.play()
 
 func get_tags_and_add_as_groups():
+	var TAGS_PATH = "res://tags/tags/"
+	var FILE_EXTENSION = "tres"
 	for tag in tags_container.tags_list:
 		var tag_name = tag.resource_path
 		
