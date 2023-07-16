@@ -1,18 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://ui/main-theme/main-theme.tres" type="Theme" id=3]
 [ext_resource path="res://ScrollContainerSwipe.gd" type="Script" id=4]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 03.tscn" type="PackedScene" id=5]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 02.tscn" type="PackedScene" id=6]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 04.tscn" type="PackedScene" id=7]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 05.tscn" type="PackedScene" id=8]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 06.tscn" type="PackedScene" id=9]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 09.tscn" type="PackedScene" id=10]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 10.tscn" type="PackedScene" id=11]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 07.tscn" type="PackedScene" id=12]
-[ext_resource path="res://licks/licks/Orange Dude Blues - Lick 08.tscn" type="PackedScene" id=13]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -29,106 +19,4 @@ anchor_bottom = 1.0
 script = ExtResource( 4 )
 
 [node name="LicksContainer" type="VBoxContainer" parent="ScrollContainerSwipe"]
-margin_right = 968.0
-margin_bottom = 3856.0
 custom_constants/separation = 64
-
-[node name="Lick1" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 1 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 968.0
-margin_bottom = 328.0
-
-[node name="Lick2" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 6 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 392.0
-margin_right = 968.0
-margin_bottom = 720.0
-
-[node name="Lick3" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 5 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 784.0
-margin_right = 968.0
-margin_bottom = 1112.0
-
-[node name="Lick4" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 7 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 1176.0
-margin_right = 968.0
-margin_bottom = 1504.0
-
-[node name="Lick5" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 8 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 1568.0
-margin_right = 968.0
-margin_bottom = 1896.0
-
-[node name="Lick6" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 9 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 1960.0
-margin_right = 968.0
-margin_bottom = 2288.0
-
-[node name="Lick7" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 12 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 2352.0
-margin_right = 968.0
-margin_bottom = 2680.0
-
-[node name="Lick8" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 13 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 2744.0
-margin_right = 968.0
-margin_bottom = 3072.0
-
-[node name="Lick9" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 10 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 3136.0
-margin_right = 968.0
-margin_bottom = 3464.0
-
-[node name="Lick10" parent="ScrollContainerSwipe/LicksContainer" instance=ExtResource( 11 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 3528.0
-margin_right = 968.0
-margin_bottom = 3856.0

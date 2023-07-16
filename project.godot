@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ScrollContainerSwipe.gd"
 }, {
-"base": "Resource",
-"class": "Tag",
-"language": "GDScript",
-"path": "res://tags/Tag.gd"
-}, {
 "base": "Reference",
 "class": "Util",
 "language": "GDScript",
@@ -26,7 +21,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ScrollContainerSwipe": "",
-"Tag": "",
 "Util": ""
 }
 
