@@ -2,8 +2,25 @@ class_name Util
 
 static func convert_index_to_enum_name(index : int, which_enum) -> String:
 	return which_enum.keys()[index]
+	
+static func get_list_of_files_in_folder(folder_path, file_extension = ".import"):
+	var total = 0
+	var dir = Directory.new()
+	var files_list = []
+	if dir.open(folder_path) == OK:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if !dir.current_is_dir():
+				if file_name.find(file_extension) == -1:
+					total += 1
+					files_list.append(file_name)
+			file_name = dir.get_next()
+	else:
+		print("An error occurred when trying to access the path.")
+	return files_list
 
-static func count_files_in_folder(folder_path, file_exception = ""):
+static func count_files_in_folder(folder_path, file_extension = ".import"):
 	var total = 0
 	var dir = Directory.new()
 	if dir.open(folder_path) == OK:
@@ -11,8 +28,9 @@ static func count_files_in_folder(folder_path, file_exception = ""):
 		var file_name = dir.get_next()
 		while file_name != "":
 			if !dir.current_is_dir():
-				if file_name != file_exception:
+				if file_name.find(file_extension) == -1:
 					total += 1
+					print(file_name)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")

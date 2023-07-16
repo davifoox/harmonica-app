@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "ScrollContainer",
 "class": "ScrollContainerSwipe",
 "language": "GDScript",
-"path": "res://ScrollContainerSwipe.gd"
+"path": "res://ui/ScrollContainerSwipe.gd"
 }, {
 "base": "Reference",
 "class": "Util",
