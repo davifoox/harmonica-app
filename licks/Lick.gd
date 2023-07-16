@@ -12,10 +12,12 @@ var chord_name : String
 
 signal started_playing(node_name)
 
-func init(folder_path : String, audio_file_path : String):
-	file_path = folder_path + audio_file_path
+func init(audio_file_path : String):
+	file_path = audio_file_path
 	
-	var current_string = audio_file_path.rstrip(".mp3")
+	var current_string = audio_file_path.lstrip("res://licks/audio/")
+	current_string = current_string.rstrip(".mp3")
+	
 	var string_array = current_string.rsplit("-", true, 3)
 	
 	artist_name = string_array[0]
