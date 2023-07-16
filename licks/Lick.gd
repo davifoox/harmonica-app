@@ -10,6 +10,8 @@ var music_name : String
 var lick_name : String
 var chord_name : String
 
+signal started_playing(node_name)
+
 func init(folder_path : String, audio_file_path : String):
 	file_path = folder_path + audio_file_path
 	
@@ -27,6 +29,7 @@ func _ready() -> void:
 	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + chord_name
 		
 func _on_button_pressed():
+	emit_signal("started_playing", name)
 	audio_stream_player.play()
 
 func get_tags_and_add_as_groups():

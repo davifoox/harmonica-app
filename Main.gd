@@ -11,3 +11,11 @@ func _ready() -> void:
 		var l = lick_scene.instance()
 		l.init(AUDIO_FOLDER_PATH, audio_file)
 		licks_container.add_child(l)
+		l.connect("started_playing", self, "_on_lick_started_playing")
+
+func _on_lick_started_playing(node_name):
+	for lick in licks_container.get_children():
+		if lick.name != node_name:
+			if lick.audio_stream_player.playing:
+				lick.audio_stream_player.stop()
+			
