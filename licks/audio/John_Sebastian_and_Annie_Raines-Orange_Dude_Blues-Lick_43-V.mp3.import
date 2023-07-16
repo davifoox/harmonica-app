@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/John_Sebastian_and_Annie_Raines-Orange_Dude_Blues-Lick_43-V.mp3-8ddff437a081b6f689c45ace3c5e0073.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/John_Sebastian_and_Annie_Raines-Orange_Dude_Blues-Lick_43-V.mp3"
+dest_files=[ "res://.import/John_Sebastian_and_Annie_Raines-Orange_Dude_Blues-Lick_43-V.mp3-8ddff437a081b6f689c45ace3c5e0073.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
