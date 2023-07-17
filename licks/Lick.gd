@@ -20,10 +20,10 @@ func init(audio_file_path : String):
 	
 	var string_array = current_string.rsplit("-", true, 3)
 	
-	artist_name = string_array[0]
-	music_name = string_array[1]
-	lick_name = string_array[2]
-	chord_name = "Chord: " + string_array[3]
+	artist_name = string_array[0].replace("_"," ")
+	music_name = string_array[1].replace("_"," ")
+	lick_name = string_array[2].replace("_"," ")
+	chord_name = "Chord: " + string_array[3].replace("_"," ")
 
 func _ready() -> void:
 	button.connect("pressed", self, "_on_button_pressed")
