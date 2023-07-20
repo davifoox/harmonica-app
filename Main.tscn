@@ -16,7 +16,52 @@ __meta__ = {
 [node name="ScrollContainerSwipe" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 256.0
 script = ExtResource( 4 )
 
 [node name="LicksContainer" type="VBoxContainer" parent="ScrollContainerSwipe"]
 custom_constants/separation = 64
+
+[node name="KeyController" type="Control" parent="."]
+margin_right = 352.0
+margin_bottom = 160.0
+
+[node name="ColorRect" type="ColorRect" parent="KeyController"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.113725, 0.235294, 1 )
+
+[node name="Label" type="Label" parent="KeyController"]
+anchor_right = 1.0
+margin_bottom = 66.0
+text = "Change Key"
+align = 1
+valign = 1
+
+[node name="ButtonPlus" type="Button" parent="KeyController"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -72.0
+margin_top = -72.0
+text = " + "
+
+[node name="KeyLabel" type="Label" parent="KeyController"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -66.0
+margin_right = 112.0
+text = "A"
+align = 1
+valign = 1
+
+[node name="ButtonMinus" type="Button" parent="KeyController"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -72.0
+margin_right = 65.0
+text = " - "
