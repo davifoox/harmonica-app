@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://KeyController.gd" type="Script" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://ui/main-theme/main-theme.tres" type="Theme" id=3]
 [ext_resource path="res://ui/ScrollContainerSwipe.gd" type="Script" id=4]
@@ -25,6 +26,7 @@ custom_constants/separation = 64
 [node name="KeyController" type="Control" parent="."]
 margin_right = 352.0
 margin_bottom = 160.0
+script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="KeyController"]
 anchor_right = 1.0
