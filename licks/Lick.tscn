@@ -32,12 +32,31 @@ valign = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="Button" type="Button" parent="."]
-anchor_left = 0.5
+[node name="PlayButton" type="Button" parent="."]
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -116.0
-margin_right = 100.0
+margin_left = 168.0
+margin_top = -92.0
+margin_right = 315.0
 text = "PLAY"
+
+[node name="StopButton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -92.0
+margin_right = 153.0
+text = "STOP"
+
+[node name="HSlider" type="HSlider" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -640.0
+margin_top = -92.0
+margin_right = -32.0
+margin_bottom = -28.0
+step = 0.01
+
+[connection signal="drag_ended" from="HSlider" to="." method="_on_HSlider_drag_ended"]
+[connection signal="drag_started" from="HSlider" to="." method="_on_HSlider_drag_started"]

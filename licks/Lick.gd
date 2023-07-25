@@ -1,8 +1,10 @@
 extends Control
 
-onready var button : Button = $Button
+onready var play_button : Button = $PlayButton
+onready var stop_button : Button = $StopButton
 onready var label : Label = $Label
 onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
+onready var h_slider : HSlider = $HSlider
 
 var file_path : String
 var artist_name : String
@@ -11,6 +13,7 @@ var lick_name : String
 var chord_name : String
 
 signal started_playing(node_name)
+var lick_length : float
 
 func init(audio_file_path : String):
 	file_path = audio_file_path
@@ -26,13 +29,25 @@ func init(audio_file_path : String):
 	chord_name = "Chord: " + string_array[3].replace("_"," ")
 
 func _ready() -> void:
-	button.connect("pressed", self, "_on_button_pressed")
+	play_button.connect("pressed", self, "_on_play_button_pressed")
+	stop_button.connect("pressed", self, "_on_stop_button_pressed")
 	audio_stream_player.stream = load(file_path)
 	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + chord_name
+	lick_length = audio_stream_player.stream.get_length()
+	h_slider.max_value = lick_length
+	
+func _process(delta: float) -> void:
+	if audio_stream_player.playing:
+		h_slider.value = audio_stream_player.get_playback_position()
+
 		
-func _on_button_pressed():
+func _on_play_button_pressed():
 	emit_signal("started_playing", name)
 	audio_stream_player.play()
+
+func _on_stop_button_pressed():
+	audio_stream_player.stop()
+	h_slider.value = 0
 
 func get_tags_and_add_as_groups():
 	pass
@@ -43,3 +58,9 @@ func get_name_from_file():
 	file_path = file_path.rstrip(FILE_EXTENSION)
 	file_path = file_path.rstrip(".")
 	
+func _on_HSlider_drag_started() -> void:
+	audio_stream_player.stop()
+	
+func _on_HSlider_drag_ended(value_changed: bool) -> void:
+	audio_stream_player.play(h_slider.value)
+	emit_signal("started_playing", name)
