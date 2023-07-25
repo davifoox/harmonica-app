@@ -27,6 +27,8 @@ func init(audio_file_path : String):
 	music_name = string_array[1].replace("_"," ")
 	lick_name = string_array[2].replace("_"," ")
 	chord_name = "Chord: " + string_array[3].replace("_"," ")
+	
+	get_tags_and_add_as_groups()
 
 func _ready() -> void:
 	play_button.connect("pressed", self, "_on_play_button_pressed")
@@ -50,7 +52,7 @@ func _on_stop_button_pressed():
 	h_slider.value = 0
 
 func get_tags_and_add_as_groups():
-	pass
+	add_to_group(chord_name.lstrip("Chord: "))
 
 func get_name_from_file():
 	var FILE_EXTENSION = "mp3"

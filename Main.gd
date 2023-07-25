@@ -26,3 +26,28 @@ func _on_lick_started_playing(node_name):
 func _on_KeyController_key_changed(key_name: String, pitch : float):
 	for lick in licks_container.get_children():
 		lick.audio_stream_player.pitch_scale = pitch
+
+func _on_AllChordsButton_pressed() -> void:
+	for lick in licks_container.get_children():
+		lick.show()
+
+func _on_ChordIButton_pressed() -> void:
+	for lick in licks_container.get_children():
+		if lick.is_in_group("I"):
+			lick.show()
+		else:
+			lick.hide()
+
+func _on_ChordIVButton_pressed() -> void:
+	for lick in licks_container.get_children():
+		if lick.is_in_group("IV"):
+			lick.show()
+		else:
+			lick.hide()
+
+func _on_ChordVButton_pressed() -> void:
+	for lick in licks_container.get_children():
+		if lick.is_in_group("V"):
+			lick.show()
+		else:
+			lick.hide()
