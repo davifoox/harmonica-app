@@ -26,7 +26,7 @@ func init(audio_file_path : String):
 	artist_name = string_array[0].replace("_"," ")
 	music_name = string_array[1].replace("_"," ")
 	lick_name = string_array[2].replace("_"," ")
-	chord_name = "Chord: " + string_array[3].replace("_"," ")
+	chord_name = string_array[3].replace("_"," ")
 	
 	get_tags_and_add_as_groups()
 
@@ -34,7 +34,7 @@ func _ready() -> void:
 	play_button.connect("pressed", self, "_on_play_button_pressed")
 	stop_button.connect("pressed", self, "_on_stop_button_pressed")
 	audio_stream_player.stream = load(file_path)
-	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + chord_name
+	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + "Chord: " + chord_name
 	lick_length = audio_stream_player.stream.get_length()
 	h_slider.max_value = lick_length
 	
@@ -52,7 +52,7 @@ func _on_stop_button_pressed():
 	h_slider.value = 0
 
 func get_tags_and_add_as_groups():
-	add_to_group(chord_name.lstrip("Chord: "))
+	add_to_group(chord_name)
 
 func get_name_from_file():
 	var FILE_EXTENSION = "mp3"
