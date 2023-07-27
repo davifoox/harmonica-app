@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://licks/Lick.gd" type="Script" id=1]
 [ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=2]
 [ext_resource path="res://ui/play-button-theme.tres" type="Theme" id=3]
 [ext_resource path="res://ui/stop-button-theme.tres" type="Theme" id=4]
+[ext_resource path="res://purple-circle.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxLine" id=2]
+color = Color( 0.160784, 0.145098, 0.25098, 1 )
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 0, 0, 0, 0.258824 )
+thickness = 10
+
+[sub_resource type="Theme" id=4]
+HSlider/styles/grabber_area = SubResource( 2 )
+HSlider/styles/grabber_area_highlight = SubResource( 2 )
+HSlider/styles/slider = SubResource( 3 )
 
 [node name="Lick" type="Control"]
 margin_right = 968.0
@@ -50,9 +64,13 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -640.0
-margin_top = -92.0
+margin_top = -96.0
 margin_right = -32.0
 margin_bottom = -28.0
+theme = SubResource( 4 )
+custom_icons/grabber_disabled = ExtResource( 5 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
 step = 0.01
 
 [node name="CapturaDeTela2023-07-27191407" type="Sprite" parent="."]
