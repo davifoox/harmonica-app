@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://licks/Lick.gd" type="Script" id=1]
-[ext_resource path="res://ui/main-theme/main-theme.tres" type="Theme" id=3]
+[ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=2]
+[ext_resource path="res://ui/play-button-theme.tres" type="Theme" id=3]
+[ext_resource path="res://ui/stop-button-theme.tres" type="Theme" id=4]
 
 [node name="Lick" type="Control"]
 margin_right = 968.0
 margin_bottom = 480.0
 rect_min_size = Vector2( 968, 480 )
-theme = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -32,6 +33,7 @@ anchor_bottom = 1.0
 margin_left = 168.0
 margin_top = -92.0
 margin_right = 315.0
+theme = ExtResource( 3 )
 text = "PLAY"
 
 [node name="StopButton" type="Button" parent="."]
@@ -39,6 +41,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -92.0
 margin_right = 153.0
+theme = ExtResource( 4 )
 text = "STOP"
 
 [node name="HSlider" type="HSlider" parent="."]
@@ -51,6 +54,11 @@ margin_top = -92.0
 margin_right = -32.0
 margin_bottom = -28.0
 step = 0.01
+
+[node name="CapturaDeTela2023-07-27191407" type="Sprite" parent="."]
+visible = false
+position = Vector2( 544, 960 )
+texture = ExtResource( 2 )
 
 [connection signal="drag_ended" from="HSlider" to="." method="_on_HSlider_drag_ended"]
 [connection signal="drag_started" from="HSlider" to="." method="_on_HSlider_drag_started"]

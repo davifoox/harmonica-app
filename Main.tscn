@@ -4,7 +4,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://ui/main-theme/main-theme.tres" type="Theme" id=3]
 [ext_resource path="res://ui/ScrollContainerSwipe.gd" type="Script" id=4]
-[ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=5]
+[ext_resource path="res://WindowsBarsColor.gd" type="Script" id=5]
 [ext_resource path="res://GroupsSelection.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Control"]
@@ -15,6 +15,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="WindowsBarsColor" type="Node" parent="."]
+script = ExtResource( 5 )
 
 [node name="KeyController" parent="." instance=ExtResource( 1 )]
 
@@ -30,8 +33,3 @@ script = ExtResource( 4 )
 
 [node name="LicksContainer" type="VBoxContainer" parent="ScrollContainerSwipe"]
 custom_constants/separation = 64
-
-[node name="CapturaDeTela2023-07-27191346" type="Sprite" parent="."]
-visible = false
-position = Vector2( 416, 896 )
-texture = ExtResource( 5 )

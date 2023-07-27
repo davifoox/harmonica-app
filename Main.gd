@@ -25,6 +25,7 @@ func _ready() -> void:
 	chord_I_button.connect("pressed", self, "_on_ChordIButton_pressed")
 	chord_IV_button.connect("pressed", self, "_on_ChordIVButton_pressed")
 	chord_V_button.connect("pressed", self, "_on_ChordVButton_pressed")
+	
 
 func _on_lick_started_playing(node_name):
 	for lick in licks_container.get_children():
