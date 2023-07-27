@@ -7,14 +7,17 @@ size = 56
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.419608, 0.372549, 0.662745, 1 )
+bg_color = Color( 0.976471, 0.819608, 0.333333, 1 )
 
 [resource]
-default_font = SubResource( 1 )
+Button/colors/font_color = Color( 0.12549, 0.109804, 0.192157, 1 )
+Button/colors/font_color_disabled = Color( 0.12549, 0.109804, 0.192157, 1 )
+Button/colors/font_color_focus = Color( 0.12549, 0.109804, 0.192157, 1 )
+Button/colors/font_color_hover = Color( 0.270588, 0.25098, 0.388235, 1 )
+Button/colors/font_color_pressed = Color( 0.2, 0.188235, 0.286275, 1 )
 Button/fonts/font = SubResource( 1 )
 Button/styles/disabled = SubResource( 2 )
 Button/styles/focus = SubResource( 2 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = SubResource( 2 )
-Label/fonts/font = SubResource( 1 )

@@ -6,6 +6,11 @@ onready var licks_container = $ScrollContainerSwipe/LicksContainer
 const AUDIO_FOLDER_PATH = "res://licks/audio/"
 onready var key_controller = $KeyController
 
+onready var all_chords_button = $GroupsSelection/AllChordsButton
+onready var chord_I_button = $GroupsSelection/ChordIButton
+onready var chord_IV_button = $GroupsSelection/ChordIVButton
+onready var chord_V_button = $GroupsSelection/ChordVButton
+
 func _ready() -> void:
 	audio_files_list = Util.load_files_paths(AUDIO_FOLDER_PATH)
 	
@@ -16,6 +21,10 @@ func _ready() -> void:
 		l.connect("started_playing", self, "_on_lick_started_playing")
 	
 	key_controller.connect("key_changed", self, "_on_KeyController_key_changed")
+	all_chords_button.connect("pressed", self, "_on_AllChordsButton_pressed")
+	chord_I_button.connect("pressed", self, "_on_ChordIButton_pressed")
+	chord_IV_button.connect("pressed", self, "_on_ChordIVButton_pressed")
+	chord_V_button.connect("pressed", self, "_on_ChordVButton_pressed")
 
 func _on_lick_started_playing(node_name):
 	for lick in licks_container.get_children():
@@ -26,6 +35,7 @@ func _on_lick_started_playing(node_name):
 func _on_KeyController_key_changed(key_name: String, pitch : float):
 	for lick in licks_container.get_children():
 		lick.audio_stream_player.pitch_scale = pitch
+
 
 func _on_AllChordsButton_pressed() -> void:
 	for lick in licks_container.get_children():
