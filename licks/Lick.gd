@@ -1,7 +1,7 @@
 extends Control
 
-onready var play_button : Button = $PlayButton
-onready var stop_button : Button = $StopButton
+onready var play_button : TextureButton = $PlayButton
+onready var stop_button : TextureButton = $StopButton
 onready var label : Label = $Label
 onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var h_slider : HSlider = $HSlider
