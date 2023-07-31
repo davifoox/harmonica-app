@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://licks/Lick.gd" type="Script" id=1]
 [ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://images/play-button.png" type="Texture" id=7]
 [ext_resource path="res://images/star-off.png" type="Texture" id=8]
 [ext_resource path="res://images/star-on.png" type="Texture" id=9]
+[ext_resource path="res://ui/roboto-thin-24x.tres" type="DynamicFont" id=10]
 
 [sub_resource type="StyleBoxLine" id=2]
 color = Color( 0.160784, 0.145098, 0.25098, 1 )
@@ -98,7 +99,8 @@ margin_left = -164.0
 margin_top = -64.0
 margin_right = -100.0
 margin_bottom = -32.0
-text = "0:00"
+custom_fonts/font = ExtResource( 10 )
+text = "0.0"
 
 [node name="TimeLeftLabel" type="Label" parent="."]
 anchor_left = 1.0
@@ -109,9 +111,10 @@ margin_left = -72.0
 margin_top = -64.0
 margin_right = -8.0
 margin_bottom = -32.0
-text = "0:10"
+custom_fonts/font = ExtResource( 10 )
+text = "5.45"
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="StarButton" type="TextureButton" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -104.0

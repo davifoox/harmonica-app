@@ -5,6 +5,8 @@ onready var stop_button : TextureButton = $StopButton
 onready var label : Label = $Label
 onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var h_slider : HSlider = $HSlider
+onready var current_time_label : Label = $CurrentTimeLabel
+onready var time_left_label : Label = $TimeLeftLabel
 
 var file_path : String
 var artist_name : String
@@ -38,9 +40,13 @@ func _ready() -> void:
 	lick_length = audio_stream_player.stream.get_length()
 	h_slider.max_value = lick_length
 	
+	reset_timers()
+	
 func _process(delta: float) -> void:
 	if audio_stream_player.playing:
 		h_slider.value = audio_stream_player.get_playback_position()
+		current_time_label.text = str(Util.convert_to_number_with_2_decimals(audio_stream_player.get_playback_position()))
+		time_left_label.text = str(get_time_left())
 
 		
 func _on_play_button_pressed():
@@ -50,6 +56,7 @@ func _on_play_button_pressed():
 func _on_stop_button_pressed():
 	audio_stream_player.stop()
 	h_slider.value = 0
+	reset_timers()
 
 func get_tags_and_add_as_groups():
 	add_to_group(chord_name)
@@ -66,3 +73,12 @@ func _on_HSlider_drag_started() -> void:
 func _on_HSlider_drag_ended(value_changed: bool) -> void:
 	audio_stream_player.play(h_slider.value)
 	emit_signal("started_playing", name)
+
+func get_time_left():
+	var time_left : float
+	time_left = audio_stream_player.stream.get_length() - audio_stream_player.get_playback_position()
+	return Util.convert_to_number_with_2_decimals(time_left) 
+
+func reset_timers():
+	current_time_label.text = "0.0"
+	time_left_label.text = str(Util.convert_to_number_with_2_decimals(lick_length))
