@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://licks/Lick.gd" type="Script" id=1]
 [ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://images/star-off.png" type="Texture" id=8]
 [ext_resource path="res://images/star-on.png" type="Texture" id=9]
 [ext_resource path="res://ui/roboto-thin-24x.tres" type="DynamicFont" id=10]
+[ext_resource path="res://common/TextureButtonFeedbackComponent.gd" type="Script" id=11]
 
 [sub_resource type="StyleBoxLine" id=2]
 color = Color( 0.160784, 0.145098, 0.25098, 1 )
@@ -58,6 +59,9 @@ texture_normal = ExtResource( 7 )
 expand = true
 stretch_mode = 4
 
+[node name="ButtonFeedbackComponent" type="Node" parent="PlayButton"]
+script = ExtResource( 11 )
+
 [node name="StopButton" type="TextureButton" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -69,6 +73,9 @@ theme = ExtResource( 4 )
 texture_normal = ExtResource( 6 )
 expand = true
 stretch_mode = 4
+
+[node name="ButtonFeedbackComponent" type="Node" parent="StopButton"]
+script = ExtResource( 11 )
 
 [node name="HSlider" type="HSlider" parent="."]
 anchor_left = 1.0
@@ -123,6 +130,9 @@ margin_right = -22.0
 margin_bottom = 114.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
+
+[node name="ButtonFeedbackComponent" type="Node" parent="StarButton"]
+script = ExtResource( 11 )
 
 [connection signal="drag_ended" from="HSlider" to="." method="_on_HSlider_drag_ended"]
 [connection signal="drag_started" from="HSlider" to="." method="_on_HSlider_drag_started"]
