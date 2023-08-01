@@ -129,6 +129,7 @@ margin_left = -104.0
 margin_top = 32.0
 margin_right = -22.0
 margin_bottom = 114.0
+toggle_mode = true
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 

@@ -84,4 +84,5 @@ func reset_timers():
 	time_left_label.text = str(Util.convert_to_number_with_2_decimals(lick_length))
 
 func _on_StarButton_pressed(button_name) -> void:
+	#TODO: adicionar func de favoritar lick
 	print("FAVORITE THIS LICK")
