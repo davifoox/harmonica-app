@@ -83,13 +83,5 @@ func reset_timers():
 	current_time_label.text = "0.0"
 	time_left_label.text = str(Util.convert_to_number_with_2_decimals(lick_length))
 
-
-# how to add button press check:
-
-#func _on_Button_button_down() -> void:
-#	touch_position = get_global_mouse_position()
-#
-#func _on_Button_button_up() -> void:
-#	var offset = 10
-#	if get_global_mouse_position().distance_to(touch_position) <= offset :
-#		emit_signal("vaccine_selected", vaccine_name)
+func _on_StarButton_pressed(button_name) -> void:
+	print("FAVORITE THIS LICK")

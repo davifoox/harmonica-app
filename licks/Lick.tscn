@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://licks/Lick.gd" type="Script" id=1]
 [ext_resource path="res://references/Captura de tela 2023-07-27 191407.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://images/star-on.png" type="Texture" id=9]
 [ext_resource path="res://ui/roboto-thin-24x.tres" type="DynamicFont" id=10]
 [ext_resource path="res://common/TextureButtonFeedbackComponent.gd" type="Script" id=11]
+[ext_resource path="res://licks/CheckIfFingerStillOnButtonComponent.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxLine" id=2]
 color = Color( 0.160784, 0.145098, 0.25098, 1 )
@@ -134,5 +135,9 @@ texture_pressed = ExtResource( 9 )
 [node name="ButtonFeedbackComponent" type="Node" parent="StarButton"]
 script = ExtResource( 11 )
 
+[node name="CheckIfFingerStillOnButtonComponent" type="Node2D" parent="StarButton"]
+script = ExtResource( 12 )
+
 [connection signal="drag_ended" from="HSlider" to="." method="_on_HSlider_drag_ended"]
 [connection signal="drag_started" from="HSlider" to="." method="_on_HSlider_drag_started"]
+[connection signal="really_pressed" from="StarButton/CheckIfFingerStillOnButtonComponent" to="." method="_on_StarButton_pressed"]
