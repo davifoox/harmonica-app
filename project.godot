@@ -44,7 +44,6 @@ config/icon="res://harmonica-app-icon.png"
 
 [autoload]
 
-GameSignals="*res://common/GameSignals.gd"
 SaveManager="*res://common/save/SaveManager.tscn"
 
 [display]

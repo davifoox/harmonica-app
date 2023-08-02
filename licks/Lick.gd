@@ -9,6 +9,8 @@ onready var current_time_label : Label = $CurrentTimeLabel
 onready var time_left_label : Label = $TimeLeftLabel
 
 var file_path : String
+var file_name : String
+
 var artist_name : String
 var music_name : String
 var lick_name : String
@@ -22,6 +24,7 @@ func init(audio_file_path : String):
 	
 	var current_string = audio_file_path.lstrip("res://licks/audio/")
 	current_string = current_string.rstrip(".mp3")
+	file_name = current_string
 	
 	var string_array = current_string.rsplit("-", true, 3)
 	
@@ -41,14 +44,13 @@ func _ready() -> void:
 	h_slider.max_value = lick_length
 	
 	reset_timers()
-	
+
 func _process(delta: float) -> void:
 	if audio_stream_player.playing:
 		h_slider.value = audio_stream_player.get_playback_position()
 		current_time_label.text = str(Util.convert_to_number_with_2_decimals(audio_stream_player.get_playback_position()))
 		time_left_label.text = str(get_time_left())
 
-		
 func _on_play_button_pressed():
 	emit_signal("started_playing", name)
 	audio_stream_player.play()
@@ -66,10 +68,10 @@ func get_name_from_file():
 	
 	file_path = file_path.rstrip(FILE_EXTENSION)
 	file_path = file_path.rstrip(".")
-	
+
 func _on_HSlider_drag_started() -> void:
 	audio_stream_player.stop()
-	
+
 func _on_HSlider_drag_ended(value_changed: bool) -> void:
 	audio_stream_player.play(h_slider.value)
 	emit_signal("started_playing", name)
@@ -84,5 +86,6 @@ func reset_timers():
 	time_left_label.text = str(Util.convert_to_number_with_2_decimals(lick_length))
 
 func _on_StarButton_pressed(button_name) -> void:
-	#TODO: adicionar func de favoritar lick
-	print("FAVORITE THIS LICK")
+	
+	SaveManager.save.favorite_licks.append(file_name)
+	SaveManager.save_file()
