@@ -6,7 +6,7 @@
 [node name="GroupsSelection" type="Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -472.0
+margin_left = -568.0
 margin_top = 32.0
 margin_right = -56.0
 margin_bottom = 128.0
@@ -40,9 +40,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -112.0
+margin_left = -160.0
 margin_top = -64.0
-margin_right = -40.0
+margin_right = -88.0
 margin_bottom = 2.0
 text = "I"
 
@@ -54,8 +54,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = -56.0
 margin_top = -64.0
-margin_right = 79.0
+margin_right = 23.0
 margin_bottom = 2.0
 text = "IV"
 
@@ -67,9 +68,23 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -91.0
-margin_top = -66.0
+margin_left = -200.0
+margin_top = -64.0
+margin_right = -120.0
+margin_bottom = 2.0
 text = "V"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="ChordVButton"]
+script = ExtResource( 1 )
+
+[node name="StarButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -66.0
+text = "*"
+
+[node name="ButtonFeedbackComponent" type="Node" parent="StarButton"]
 script = ExtResource( 1 )

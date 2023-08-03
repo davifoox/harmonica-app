@@ -10,6 +10,7 @@ onready var all_chords_button = $GroupsSelection/AllChordsButton
 onready var chord_I_button = $GroupsSelection/ChordIButton
 onready var chord_IV_button = $GroupsSelection/ChordIVButton
 onready var chord_V_button = $GroupsSelection/ChordVButton
+onready var star_button = $GroupsSelection/StarButton
 
 func _ready() -> void:
 	audio_files_list = Util.load_files_paths(AUDIO_FOLDER_PATH)
@@ -25,6 +26,7 @@ func _ready() -> void:
 	chord_I_button.connect("pressed", self, "_on_ChordIButton_pressed")
 	chord_IV_button.connect("pressed", self, "_on_ChordIVButton_pressed")
 	chord_V_button.connect("pressed", self, "_on_ChordVButton_pressed")
+	star_button.connect("pressed", self, "_on_StarButton_pressed")
 	
 
 func _on_lick_started_playing(node_name):
@@ -59,6 +61,13 @@ func _on_ChordIVButton_pressed() -> void:
 func _on_ChordVButton_pressed() -> void:
 	for lick in licks_container.get_children():
 		if lick.is_in_group("V"):
+			lick.show()
+		else:
+			lick.hide()
+
+func _on_StarButton_pressed() -> void:
+	for lick in licks_container.get_children():
+		if lick.file_name in SaveManager.save.favorite_licks:
 			lick.show()
 		else:
 			lick.hide()
