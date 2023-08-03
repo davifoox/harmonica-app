@@ -2,6 +2,7 @@ extends Control
 
 onready var play_button : TextureButton = $PlayButton
 onready var stop_button : TextureButton = $StopButton
+onready var star_button : TextureButton = $StarButton
 onready var label : Label = $Label
 onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var h_slider : HSlider = $HSlider
@@ -44,7 +45,9 @@ func _ready() -> void:
 	h_slider.max_value = lick_length
 	
 	reset_timers()
-	#TODO: check if this lick is favorited
+	
+	if this_lick_is_in_favorites_list():
+		star_button.pressed = true
 
 func _process(delta: float) -> void:
 	if audio_stream_player.playing:
@@ -87,6 +90,12 @@ func reset_timers():
 	time_left_label.text = str(Util.convert_to_number_with_2_decimals(lick_length))
 
 func _on_StarButton_pressed(button_name) -> void:
-	#TODO: check if file_name is already on list
-	SaveManager.save.favorite_licks.append(file_name)
+	if not this_lick_is_in_favorites_list():
+		SaveManager.save.favorite_licks.append(file_name)
+	else:
+		SaveManager.save.favorite_licks.erase(file_name)
 	SaveManager.save_file()
+
+func this_lick_is_in_favorites_list():
+	return SaveManager.save.favorite_licks.has(file_name)
+		
