@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/a2-harmonica.mp3-928701aff3a179f8c6f121b68d4ede1e.mp3str"
+
+[deps]
+
+source_file="res://a2-harmonica.mp3"
+dest_files=[ "res://.import/a2-harmonica.mp3-928701aff3a179f8c6f121b68d4ede1e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

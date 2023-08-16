@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Peg_Leg_Sam-Greasy_Greens-Lick_05-I.mp3-d9ad45dc32a0834fb3e374ec585da9c3.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/Peg_Leg_Sam-Greasy_Greens-Lick_05-I.mp3"
+dest_files=[ "res://.import/Peg_Leg_Sam-Greasy_Greens-Lick_05-I.mp3-d9ad45dc32a0834fb3e374ec585da9c3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
