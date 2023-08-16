@@ -3,6 +3,7 @@ extends Control
 var audio_files_list = []
 var lick_scene = preload("res://licks/Lick.tscn")
 onready var licks_container = $ScrollContainerSwipe/LicksContainer
+onready var scroll_container_swipe = $ScrollContainerSwipe 
 const AUDIO_FOLDER_PATH = "res://licks/audio/"
 onready var key_controller = $KeyController
 
@@ -71,3 +72,11 @@ func _on_StarButton_pressed() -> void:
 			lick.show()
 		else:
 			lick.hide()
+
+
+func _on_NextButton_pressed() -> void:
+	scroll_container_swipe.set_v_scroll(scroll_container_swipe.get_v_scroll() + 10000)
+
+
+func _on_PreviousButton_pressed() -> void:
+	scroll_container_swipe.set_v_scroll(scroll_container_swipe.get_v_scroll() - 10000)
