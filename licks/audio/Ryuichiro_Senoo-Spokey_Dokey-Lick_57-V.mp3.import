@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ryuichiro_Senoo-Spokey_Dokey-Lick_57-V.mp3-85c9812d29f002479923c3a7b2cc5be8.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/Ryuichiro_Senoo-Spokey_Dokey-Lick_57-V.mp3"
+dest_files=[ "res://.import/Ryuichiro_Senoo-Spokey_Dokey-Lick_57-V.mp3-85c9812d29f002479923c3a7b2cc5be8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
