@@ -12,6 +12,7 @@ onready var chord_I_button = $GroupsSelection/ChordIButton
 onready var chord_IV_button = $GroupsSelection/ChordIVButton
 onready var chord_V_button = $GroupsSelection/ChordVButton
 onready var star_button = $GroupsSelection/StarButton
+onready var random_button = $GroupsSelection/RandomButton
 
 func _ready() -> void:
 	audio_files_list = Util.load_files_paths(AUDIO_FOLDER_PATH)
@@ -28,6 +29,7 @@ func _ready() -> void:
 	chord_IV_button.connect("pressed", self, "_on_ChordIVButton_pressed")
 	chord_V_button.connect("pressed", self, "_on_ChordVButton_pressed")
 	star_button.connect("pressed", self, "_on_StarButton_pressed")
+	random_button.connect("pressed", self, "_on_RandomButton_pressed")
 	
 
 func _on_lick_started_playing(node_name):
@@ -73,6 +75,17 @@ func _on_StarButton_pressed() -> void:
 		else:
 			lick.hide()
 
+func _on_RandomButton_pressed():
+	var licks_amount : int = licks_container.get_children().size()
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var random_number = rng.randi_range(0, licks_amount)
+	
+	for i in range(0, licks_amount):
+		if i == random_number:
+			licks_container.get_child(i).show()
+		else:
+			licks_container.get_child(i).hide()
 
 func _on_NextButton_pressed() -> void:
 	scroll_container_swipe.set_v_scroll(scroll_container_swipe.get_v_scroll() + 10000)

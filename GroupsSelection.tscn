@@ -9,7 +9,7 @@ anchor_right = 1.0
 margin_left = -568.0
 margin_top = 32.0
 margin_right = -56.0
-margin_bottom = 128.0
+margin_bottom = 224.0
 theme = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="."]
+visible = false
 anchor_right = 1.0
 margin_bottom = 14.0
 text = "Select Tag"
@@ -27,9 +28,9 @@ valign = 1
 [node name="AllChordsButton" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -64.0
+margin_top = -158.0
 margin_right = 63.0
-margin_bottom = 2.0
+margin_bottom = -92.0
 text = "All"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="AllChordsButton"]
@@ -41,9 +42,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -160.0
-margin_top = -64.0
+margin_top = -158.0
 margin_right = -88.0
-margin_bottom = 2.0
+margin_bottom = -92.0
 text = "I"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="ChordIButton"]
@@ -55,9 +56,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -56.0
-margin_top = -64.0
+margin_top = -158.0
 margin_right = 23.0
-margin_bottom = 2.0
+margin_bottom = -92.0
 text = "IV"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="ChordIVButton"]
@@ -69,9 +70,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -200.0
-margin_top = -64.0
+margin_top = -158.0
 margin_right = -120.0
-margin_bottom = 2.0
+margin_bottom = -92.0
 text = "V"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="ChordVButton"]
@@ -83,8 +84,22 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -80.0
-margin_top = -66.0
+margin_top = -160.0
+margin_bottom = -94.0
 text = "*"
 
 [node name="ButtonFeedbackComponent" type="Node" parent="StarButton"]
+script = ExtResource( 1 )
+
+[node name="RandomButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = -64.0
+margin_bottom = 2.0
+text = "Random"
+
+[node name="ButtonFeedbackComponent" type="Node" parent="RandomButton"]
 script = ExtResource( 1 )

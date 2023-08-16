@@ -47,7 +47,6 @@ margin_bottom = 224.0
 
 [node name="GroupsSelection" parent="." instance=ExtResource( 6 )]
 margin_top = 64.0
-margin_bottom = 224.0
 
 [node name="ScrollContainerSwipe" type="ScrollContainer" parent="."]
 anchor_right = 1.0
