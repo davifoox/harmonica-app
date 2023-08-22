@@ -92,6 +92,7 @@ func _on_StarButton_pressed() -> void:
 				lick.hide()
 
 func _on_RandomButton_pressed():
+	#TODO: fix this now with artists labels
 	var licks_amount : int = licks_container.get_children().size()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
