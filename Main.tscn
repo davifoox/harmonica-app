@@ -70,7 +70,7 @@ margin_top = -66.0
 margin_right = -56.0
 custom_colors/font_color = Color( 1, 1, 1, 0.196078 )
 custom_fonts/font = ExtResource( 7 )
-text = "Made by Davi Fox - v0.0.10"
+text = "Made by Davi Fox - v0.0.11"
 align = 2
 valign = 1
 
