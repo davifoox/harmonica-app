@@ -23,6 +23,8 @@ func _ready() -> void:
 			artist_name = get_artist_name_from_file(audio_file)
 			var label = Label.new()
 			label.text = artist_name
+			label.uppercase = true
+			label.modulate = "f9d155" #Yellow
 			licks_container.add_child(label)
 			
 		var l = lick_scene.instance()
@@ -60,21 +62,24 @@ func _on_ChordIButton_pressed() -> void:
 		if lick.is_in_group("I"):
 			lick.show()
 		else:
-			lick.hide()
+			if !(lick is Label):
+				lick.hide()
 
 func _on_ChordIVButton_pressed() -> void:
 	for lick in licks_container.get_children():
 		if lick.is_in_group("IV"):
 			lick.show()
 		else:
-			lick.hide()
+			if !(lick is Label):
+				lick.hide()
 
 func _on_ChordVButton_pressed() -> void:
 	for lick in licks_container.get_children():
 		if lick.is_in_group("V"):
 			lick.show()
 		else:
-			lick.hide()
+			if !(lick is Label):
+				lick.hide()
 
 func _on_StarButton_pressed() -> void:
 	for lick in licks_container.get_children():
