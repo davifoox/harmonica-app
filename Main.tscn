@@ -6,7 +6,7 @@
 [ext_resource path="res://ui/ScrollContainerSwipe.gd" type="Script" id=4]
 [ext_resource path="res://WindowsBarsColor.gd" type="Script" id=5]
 [ext_resource path="res://GroupsSelection.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ui/roboto-regular-24x.tres" type="DynamicFont" id=7]
+[ext_resource path="res://ui/VersionLabel.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -62,17 +62,7 @@ script = ExtResource( 4 )
 [node name="LicksContainer" type="VBoxContainer" parent="ScrollContainerSwipe"]
 custom_constants/separation = 32
 
-[node name="VersionLabel" type="Label" parent="."]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -66.0
-margin_right = -56.0
-custom_colors/font_color = Color( 1, 1, 1, 0.196078 )
-custom_fonts/font = ExtResource( 7 )
-text = "Made by Davi Fox - v0.0.11"
-align = 2
-valign = 1
+[node name="VersionLabel" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="PreviousButton" to="." method="_on_PreviousButton_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
