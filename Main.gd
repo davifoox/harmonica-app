@@ -19,6 +19,8 @@ func _ready() -> void:
 	
 	var artist_name = ""
 	for audio_file in audio_files_list:
+		
+		#Artist Name Labels
 		if artist_name != get_artist_name_from_file(audio_file):
 			artist_name = get_artist_name_from_file(audio_file)
 			var label = Label.new()
