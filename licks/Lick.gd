@@ -40,7 +40,8 @@ func _ready() -> void:
 	play_button.connect("pressed", self, "_on_play_button_pressed")
 	stop_button.connect("pressed", self, "_on_stop_button_pressed")
 	audio_stream_player.stream = load(file_path)
-	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + "Chord: " + chord_name
+#	label.text = artist_name + "\n" + music_name + "\n" + lick_name + "\n" + "Chord: " + chord_name
+	label.text = music_name + "\n" + lick_name + "\n" + "Chord: " + chord_name
 	lick_length = audio_stream_player.stream.get_length()
 	h_slider.max_value = lick_length
 	
