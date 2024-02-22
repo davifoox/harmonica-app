@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Little_Walter-Sad_Hours-Lick_14-I.mp3-67bda0cf95df0ed3b7f15052db2df914.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/Little_Walter-Sad_Hours-Lick_14-I.mp3"
+dest_files=[ "res://.import/Little_Walter-Sad_Hours-Lick_14-I.mp3-67bda0cf95df0ed3b7f15052db2df914.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

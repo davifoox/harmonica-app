@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/James_Cotton-Blues_In_My_Sleep-Lick_35-I.mp3-baf59ffda7dc29c06e4c386c9a283ff4.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/James_Cotton-Blues_In_My_Sleep-Lick_35-I.mp3"
+dest_files=[ "res://.import/James_Cotton-Blues_In_My_Sleep-Lick_35-I.mp3-baf59ffda7dc29c06e4c386c9a283ff4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
