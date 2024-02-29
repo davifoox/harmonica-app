@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_14-V.mp3-f6fa71f2ccc2a0ecb25f2962d9b355b9.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_14-V.mp3"
+dest_files=[ "res://.import/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_14-V.mp3-f6fa71f2ccc2a0ecb25f2962d9b355b9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

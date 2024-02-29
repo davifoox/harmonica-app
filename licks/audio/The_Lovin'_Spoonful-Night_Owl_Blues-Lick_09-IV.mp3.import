@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_09-IV.mp3-cd2e2bcbd5eec4552a6ffe0e95cb43f0.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_09-IV.mp3"
+dest_files=[ "res://.import/The_Lovin'_Spoonful-Night_Owl_Blues-Lick_09-IV.mp3-cd2e2bcbd5eec4552a6ffe0e95cb43f0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
