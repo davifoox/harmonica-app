@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Peg_Leg_Sam-Navaho_Trail-Lick_06-I.mp3-c859393fda461c4f0789b5c09dbcc4f4.mp3str"
+
+[deps]
+
+source_file="res://licks/audio/Peg_Leg_Sam-Navaho_Trail-Lick_06-I.mp3"
+dest_files=[ "res://.import/Peg_Leg_Sam-Navaho_Trail-Lick_06-I.mp3-c859393fda461c4f0789b5c09dbcc4f4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
